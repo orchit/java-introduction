@@ -21,7 +21,10 @@ public class SimpleClass {
     }
 
     //nested inner classes
-    public class Test {
+    public static class Test {
+        public void doSomething() {
+            //can't access SimpleClasses variables
+        }
 
         public class Test1 {
             public class Test2 {
@@ -31,6 +34,16 @@ public class SimpleClass {
                     }
                 }
             }
+        }
+    }
+
+    public class GoodFriend {
+        public void doSomething() {
+            //Be careful when doing this, because it will cause confusion
+            onlyVisibleForClassesInSamePackage = 1;
+            onlyVisibleInClass = "Uhh sneaky!";
+            onlyVisibleForSubClassesAndSamePackage = 2.0;
+            everyone = true;
         }
     }
 }

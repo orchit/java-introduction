@@ -10,4 +10,8 @@ public class UsesSimpleClass {
         //won't work as Test3 is private!
         //new SimpleClass.Test.Test1.Test2.Test3.Test4();
     }
+
+    public UsesSimpleClass() {
+        //You can do initialization stuff here
+    }
 }
