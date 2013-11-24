@@ -7,7 +7,7 @@ public class SimpleClass {
     protected double onlyVisibleForSubClassesAndSamePackage;
     public boolean everyone;
 
-    void myMagicMethod(){
+    void myMagicMethod() {
         //I can do magic here - for real!
         double a = 0.7;
         double b = 0.9;
@@ -16,7 +16,21 @@ public class SimpleClass {
         System.out.println(x == y); //this will print out false!
     }
 
-    SimpleClass getInstance(){
+    SimpleClass getInstance() {
         return new SimpleClass();
+    }
+
+    //nested inner classes
+    public class Test {
+
+        public class Test1 {
+            public class Test2 {
+                private class Test3 {
+                    public class Test4 {
+
+                    }
+                }
+            }
+        }
     }
 }
